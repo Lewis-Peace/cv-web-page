@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cv-web-page';
+  tabs = [
+    {name: 'Home', path: ''},
+    {name: 'Projects', path: 'projects'}
+  ]
+  tabPanel: undefined
 }
