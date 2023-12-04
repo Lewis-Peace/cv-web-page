@@ -1,0 +1,17 @@
+<mat-card class="m-3">
+    <mat-card-header>
+        <mat-card-title>{{project?.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="display: flex;">
+      <p style="flex-grow: 1;">{{project?.ongoing ? 'Work In Progress' : project?.desc}}</p>
+      <img mat-card-image width="20%" matCardImage [src]="project?.img">
+    </mat-card-content>
+    <mat-card-actions *ngIf="!!project?.redirection" align="end">
+        <a [href]="project?.redirection" target="_blank">
+          <button mat-button>Latest release</button>
+        </a>
+    </mat-card-actions>
+    <mat-card-footer *ngIf="project?.latestRelease || project?.dismissed">
+      {{!project?.dismissed ? project?.latestRelease : 'This project has been dismissed'}}
+    </mat-card-footer>
+</mat-card>

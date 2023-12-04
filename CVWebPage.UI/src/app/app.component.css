@@ -1,0 +1,23 @@
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex: 1 1 auto;
+}
+
+.footer {
+  display: flex;
+  font-size: x-large;
+  margin: 5px;
+  margin-bottom: 0;
+  vertical-align: sub;
+  flex: 1 1 auto;
+}
+
+.main {
+  height: 90%;
+  overflow: auto;
+}

@@ -1,0 +1,15 @@
+@media screen and (min-width: 768px) {
+  .page {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  .show-on-phone {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-on-phone {
+    display: none !important;
+  }
+}

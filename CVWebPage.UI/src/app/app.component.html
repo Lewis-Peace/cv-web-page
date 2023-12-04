@@ -1,0 +1,37 @@
+<div class="page">
+  <div class="header shadow">
+    <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+      <a mat-tab-link
+         *ngFor="let tabLink of tabs"
+         [routerLink]="tabLink.path"
+         routerLinkActive #rlaRef="routerLinkActive"
+         [active]="rlaRef.isActive"
+         [routerLinkActiveOptions]="{exact: true}">
+          {{tabLink.name}}
+      </a>
+    </nav>
+  </div>
+  
+  <div class="main">
+    <mat-tab-nav-panel #tabPanel>
+      <router-outlet></router-outlet>
+    </mat-tab-nav-panel>
+  </div>
+  
+  <footer class="footer">
+    <a disabled="" mat-button>Falcon Kristyan © 2021</a>
+    <div style="flex-grow: 1;"></div>
+    <div>
+      <button mat-icon-button href="https://www.facebook.com/kristyan.falcon" target="blank">
+        <i class="fa-brands fa-facebook"></i>
+      </button>
+      <button mat-icon-button href="https://www.instagram.com/kristyan456/" target="blank">
+        <i class="fa-brands fa-instagram"></i>  
+      </button>
+      <button mat-icon-button href="https://www.linkedin.com/in/kristyan-falcon-63b468145/" target="blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </button>
+    </div>
+  </footer>
+  
+</div>

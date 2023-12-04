@@ -1,0 +1,41 @@
+<div class="page">
+  <mat-card class="m-3">
+    <mat-card-content class="d-flex">
+      <img mat-card-image style="padding: 4px;" src="../../assets/me 3.jpeg" width="35%"/>
+      <span style="margin: 5px">{{description}}</span>
+    </mat-card-content>
+  </mat-card>
+
+  <mdb-carousel class="m-3 hide-on-phone" [dark]="true" [interval]="5000">
+    <mdb-carousel-item>
+      <img src="../../../assets/basket.jpg" class="w-100 d-block">
+      <div class="carousel-caption d-block">
+        <h2><mark>Mira alla luna, anche se mancherai il bersaglio finirai pur sempre in mezzo alle stelle.</mark></h2> <br/>
+        <p><mark>Les Brown</mark></p>
+      </div>
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <img src="../../../assets/highJump.jpg" class="w-100 d-block">
+      <div class="carousel-caption d-none d-md-block">
+        <h2><mark>Nel momento in cui dubiti di poter volare, perdi per sempre la facoltà di farlo.</mark></h2> <br/>
+        <p><mark>J. M. Barrie</mark></p>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+
+  <app-events title="Esperienze lavorative" [dataSource]="expLavoro" [displayedColumns]="['inizio', 'fine', 'descrizione']"></app-events>
+
+  <app-events title="Educazione e Titoli di studio" [dataSource]="titoliStudio" [displayedColumns]="['conseguito', 'descrizione']"></app-events>
+
+  <mat-card class="m-3">
+    <mat-card-header>
+        <mat-card-title>Patente di guida B</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        Conseguita nel 2017
+    </mat-card-content>
+  </mat-card>
+
+  <div style="height: 20px;"></div>
+
+</div>
