@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { IProject } from './IProject'
+import { IProject } from '../../../Data/IProject'
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  styleUrls: ['../../pages.css']
 })
 export class ProjectComponent {
   @Input() project: IProject | undefined

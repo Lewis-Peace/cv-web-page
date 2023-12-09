@@ -1,7 +1,8 @@
 <div class="page">
   <mat-card class="m-3">
     <mat-card-content class="d-flex">
-      <img mat-card-image style="padding: 4px;" src="../../assets/me 3.jpeg" width="35%"/>
+      <img mat-card-image class="hide-on-phone p-1" src="../../assets/me 3.jpeg" width="35%"/>
+      <img mat-card-image class="show-on-phone p-1" src="../../assets/me 2.jpg" width="35%"/>
       <span style="margin: 5px">{{description}}</span>
     </mat-card-content>
   </mat-card>
@@ -23,9 +24,9 @@
     </mdb-carousel-item>
   </mdb-carousel>
 
-  <app-events title="Esperienze lavorative" [dataSource]="expLavoro" [displayedColumns]="['inizio', 'fine', 'descrizione']"></app-events>
+  <app-events title="Esperienze lavorative" [dataSource]="expLavoro" [displayedColumns]="['inizio', 'fine', 'descrizione']" [displayedColumnsPhone]="['durata', 'descrizione']"></app-events>
 
-  <app-events title="Educazione e Titoli di studio" [dataSource]="titoliStudio" [displayedColumns]="['conseguito', 'descrizione']"></app-events>
+  <app-events title="Educazione e Titoli di studio" [dataSource]="titoliStudio" [displayedColumns]="['data', 'descrizione']"></app-events>
 
   <mat-card class="m-3">
     <mat-card-header>
@@ -35,7 +36,5 @@
         Conseguita nel 2017
     </mat-card-content>
   </mat-card>
-
-  <div style="height: 20px;"></div>
 
 </div>
